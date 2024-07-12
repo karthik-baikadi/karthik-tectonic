@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prac</title>
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="board" id="kanban-board">
+        <div class="column" data-column="TODO">
+            <h2>TODO</h2>
+            <div class="task-list"></div>
+            <button class="add-task-btn">Add Task</button>
+        </div>
+        <div class="column" data-column="IN_PROGRESS">
+            <h2>IN PROGRESS</h2>
+            <div class="task-list"></div>
+            <button class="add-task-btn">Add Task</button>
+        </div>
+        <div class="column" data-column="IN_REVIEW">
+            <h2>IN REVIEW</h2>
+            <div class="task-list"></div>
+            <button class="add-task-btn">Add Task</button>
+        </div>
+        <div class="column" data-column="DONE">
+            <h2>DONE</h2>
+            <div class="task-list"></div>
+            <button class="add-task-btn">Add Task</button>
+        </div>
+        <footer>
+            <button class="add-column-btn">+</button>
+        </footer>
+        
+    </div>
+    <div class="modal" id="task-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <form id="task-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+                <label for="type">Type:</label>
+                <input type="text" id="type" required>
+                <label for="effort">Effort Estimation:</label>
+                <input type="number" id="effort" required>
+                <label for="priority">Priority:</label>
+                <select id="priority">
+                    <option value="P0">P0</option>
+                    <option value="P1">P1</option>
+                    <option value="P2">P2</option>
+                </select>
+                <label for="description">Description:</label>
+                <textarea id="description" required></textarea>
+                <label for="assignee">Assignee:</label>
+                <input type="text" id="assignee" required>
+                <label for="attachments">Attachments:</label>
+                <input type="file" id="attachments" multiple>
+                <label for="depends">Depends On:</label>
+                <input type="text" id="depends">
+                <label for="blocks">Blocks:</label>
+                <input type="text" id="blocks">
+                <label for="tags">Tags:</label>
+                <input type="text" id="tags">
+                <button type="submit">Save Task</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
