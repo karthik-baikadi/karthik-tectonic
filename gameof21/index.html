@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Game of 21</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="Container">
+        <div>
+            <form id="playerForm">
+                <label for="NumberofPlayers">Number of Players:</label>
+                <input type="number" id="NumberofPlayers" min="2" max="5" placeholder="2">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div>
+            <button id="Start-Button">Start new game</button>
+            <div id="Deck-ID">
+                <p></p>
+            </div>
+        </div>
+        <div class="Player-Container" id="Player-Container">
+        </div>
+
+        <div id="Display-Zone">
+        
+        </div>
+
+        <div class="Hold-Discard-Buttons">
+            <button id="hold-button">Hold Card</button>
+            <button id="skip-button">Skip Card</button>
+        </div>
+
+        <div class="Discard-Zone"></div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
